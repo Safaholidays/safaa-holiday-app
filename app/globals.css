@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* الخط العربي الافتراضي */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  direction: rtl; /* دعم الاتجاه من اليمين لليسار */
+}
+
+/* الروابط */
+a {
+  @apply text-blue-600 hover:underline;
+}
+
+/* الأزرار */
+button {
+  @apply transition duration-200;
+}

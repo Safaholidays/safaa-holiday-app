@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* تخصيص الخط الافتراضي للعربية */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+a {
+  @apply text-blue-600 hover:underline;
+}
+
+button {
+  @apply transition duration-200;
+}
