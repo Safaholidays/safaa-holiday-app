@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     const base64 = buffer.toString('base64');
 
     const response = await resend.emails.send({
-      from: 'info@safaholidays.com',
+      from: 'medical@resend.dev',
       to: 'safaholidays0@gmail.com',
       subject: `طلب جديد للسياحة العلاجية - ${patientName}`,
       html: `
