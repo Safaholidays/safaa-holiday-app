@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+export const dynamic = 'force-dynamic';
+
 const resend = new Resend(process.env.RESEND_API_KEY || '');
 
 export async function POST(req: Request) {
@@ -16,15 +18,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'البيانات غير مكتملة' }, { status: 400 });
     }
 
-    if (file.size > 2 * 1024 * 1024) {
-      return NextResponse.json({ error: 'حجم الملف أكبر من 2 ميغابايت' }, { status: 400 });
-    }
-
     const buffer = Buffer.from(await file.arrayBuffer());
     const base64 = buffer.toString('base64');
 
     const response = await resend.emails.send({
-      from: 'info@safaholidays.com',
+      from: 'medical@resend.dev',
       to: 'safaholidays0@gmail.com',
       subject: `طلب جديد للسياحة العلاجية - ${patientName}`,
       html: `
