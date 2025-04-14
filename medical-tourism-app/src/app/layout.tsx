@@ -3,7 +3,7 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-geist-sans", // احتفظنا بنفس الاسم للمتغيرات للتناسق
+  variable: "--font-geist-sans", 
   subsets: ["latin"],
 });
 
