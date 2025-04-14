@@ -10,7 +10,7 @@ export async function POST(req: Request) {
       from: 'info@safaholidays.com',
       to: 'safaholidays0@gmail.com',
       subject: 'طلب جديد للسياحة العلاجية',
-      html: `<p>${body.name} أرسل طلبًا</p>`,
+      html: `<p>اسم مقدم الطلب: ${body.name}</p><p>البريد: ${body.email}</p>`,
     });
 
     return Response.json({ success: true, data });
